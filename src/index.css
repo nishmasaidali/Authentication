@@ -1,0 +1,483 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  transition: 0.3s;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+/* =========================
+   AUTH CONTAINER
+========================= */
+
+.auth-container {
+  min-height: 90vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .auth-card {
+  background: #1e1e1e;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+input {
+  width: 100%;
+
+  padding: 10px;
+
+  border: 2px solid #ccc;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  background: white;
+
+  color: #222;
+}
+
+input:focus {
+  border-color: #333;
+}
+
+body.dark input {
+  background: #2b2b2b;
+
+  color: white;
+
+  border-color: #555;
+}
+
+/* =========================
+   VALIDATION
+========================= */
+
+input.valid {
+  border-color: green;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+/* =========================
+   PASSWORD SHOW / HIDE
+========================= */
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 70px;
+}
+
+.show-password {
+  position: absolute;
+
+  right: 5px;
+  top: 5px;
+
+  margin: 0;
+
+  padding: 7px 10px;
+
+  width: auto;
+
+  background: transparent;
+
+  color: #333;
+
+  border: none;
+}
+
+.show-password:hover {
+  opacity: 0.7;
+}
+
+body.dark .show-password {
+  color: white;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  padding: 10px 15px;
+
+  margin-top: 10px;
+
+  cursor: pointer;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #333;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.error {
+  color: red;
+
+  font-size: 14px;
+}
+
+.success {
+  color: green;
+
+  font-size: 14px;
+}
+
+.info {
+  color: #555;
+
+  font-size: 14px;
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.checkbox {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 10px 0;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  text-decoration: none;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-container {
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.theme-button {
+  margin: 0;
+}
+
+.profile-card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .profile-card {
+  background: #1e1e1e;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-image {
+  width: 150px;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+.profile-placeholder {
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #ddd;
+
+  font-size: 50px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   AVATAR FORM
+========================= */
+
+.avatar-form {
+  margin-top: 20px;
+
+  max-width: 500px;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-button {
+  display: block;
+
+  margin-top: 20px;
+
+  background: #c62828;
+}
+
+/* =========================
+   SKELETON LOADING
+========================= */
+
+.skeleton-container {
+  max-width: 800px;
+
+  margin: 50px auto;
+}
+
+.skeleton {
+  background: #ddd;
+
+  border-radius: 5px;
+
+  animation: skeleton-loading 1.2s infinite;
+}
+
+.skeleton-title {
+  width: 200px;
+
+  height: 35px;
+
+  margin-bottom: 30px;
+}
+
+.skeleton-avatar {
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  margin-bottom: 20px;
+}
+
+.skeleton-text {
+  width: 80%;
+
+  height: 20px;
+
+  margin-bottom: 15px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+  position: fixed;
+
+  top: 20px;
+
+  right: 20px;
+
+  padding: 15px 20px;
+
+  border-radius: 5px;
+
+  background: #222;
+
+  color: white;
+
+  z-index: 1000;
+}
+
+.toast.success {
+  background: green;
+}
+
+.toast.error {
+  background: red;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .auth-container {
+    min-height: auto;
+
+    padding: 20px 0;
+  }
+
+  .auth-card {
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .theme-button {
+    width: 100%;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-image,
+  .profile-placeholder {
+    width: 120px;
+
+    height: 120px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .show-password {
+    width: auto;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .toast {
+    left: 15px;
+
+    right: 15px;
+
+    text-align: center;
+  }
+}
+
